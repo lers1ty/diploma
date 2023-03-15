@@ -4,3 +4,131 @@
 @import "global";
 /* ==================================================================== */
 
+.header {
+  background: url(/images/bg/header_bg.jpg) 50% 50% / cover no-repeat;
+}
+
+.header__top {
+  margin: 0 0 65px;
+}
+
+.container {}
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__img {}
+
+.header__tel {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+}
+
+.header__socials {
+  display: flex;
+}
+
+.header__socials-item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 17px;
+  }
+}
+
+.header__body {}
+
+.header__body-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__text {}
+
+.header__title {
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 110%;
+  max-width: 785px;
+  color: #FFF;
+  margin: 0 0 50px;
+
+  span {
+    color: #CBB47A;
+  }
+}
+
+.header__subtitle {
+  margin: 0 0 50px 40px;
+  max-width: 524px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFF;
+}
+
+.header__button {}
+
+.button {}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -30px ;
+}
+
+.header__row-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 375px;
+  border-radius: 20px;
+  background-color: #FFF;
+
+  svg {
+    position: absolute;
+    bottom: 15px;
+    right: 35px;
+  }
+}
+
+.header__item-content {
+  padding: 50px 95px 70px 50px;
+
+}
+
+
+.header__item-title {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  color: #212225;
+
+  span {
+    display: block;
+    width: 61px;
+    height: 62px;
+  }
+}
+
+.header__item-subtitle {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
