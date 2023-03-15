@@ -1,0 +1,19 @@
+html,
+body {
+  font-family: "Philosopher", sans-serif;
+  color: #212225;
+  line-height: 160%;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1160px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
