@@ -3,6 +3,7 @@ body {
   font-family: "TT Norms", sans-serif;
   color: #212225;
   line-height: 150%;
+  font-weight: 700;
 }
 
 .wrapper {
@@ -21,12 +22,37 @@ body {
 .button {
   display: inline-block;
   background: #497BDF;
+  color: #fff;
   letter-spacing: 0.1em;
   font-weight: 700;
   font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
   text-transform: uppercase;
   border-radius: 10px;
-  padding: 0 0 0 0;
+  padding: 40px 80px;
+  transition: all .3s;
+
+  &:hover {
+    scale: 1.025;
+    transition: all .3s;
+  }
+}
+.button__empty {
+  display: inline-block;
+  background: #fff;
+  color: #8C8C8C;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  border-radius: 10px;
+  padding: 38px 65px;
+  white-space: nowrap;
+  transition: all .3s;
+  &:hover {
+    scale: 1.025;
+    transition: all .3s;
+  }
 }
 
 header {
@@ -34,6 +60,10 @@ header {
 }
 
 .main__greeting {
-  padding: 180px 0 90px 0;
+  padding: 180px 0 100px 0;
   background: url(/images/bg/greeting-bg.png) 50% 50% / cover no-repeat;
+}
+
+.main__rec {
+  
 }
