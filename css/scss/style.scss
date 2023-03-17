@@ -1,13 +1,11 @@
-/* ============================== IMPORT ============================== */
+/* =======background======================= IMPORT ============================== */
 @import "reset";
 @import "fonts";
 @import "global";
+
 /* ==================================================================== */
 
-.header {
-  background: url(../images/bg/header-bg.jpg) 50% 50% / cover no-repeat;
-}
-
+/* ============================== HEADER ============================== */
 .header__top {
   margin: 0 0 65px;
 }
@@ -46,7 +44,8 @@
   }
 }
 
-.header__body {}
+.header__body {
+}
 
 .header__body-inner {
   display: flex;
@@ -78,14 +77,16 @@
   color: #FFF;
 }
 
-.header__button {}
+.header__btn {
+  a {
+  }
+}
 
-.button {}
 
 .header__row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: -30px ;
+  margin: 50px 0 -30px 0;
 }
 
 .header__row-item {
@@ -131,4 +132,92 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+}
+
+/* ============================== GREETING ============================== */
+
+.greeting__inner {
+  position: relative;
+}
+
+.greeting__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting__text {
+  max-width: 750px;
+}
+
+.greeting__title {
+  margin: 0 0 50px 0;
+  font-family: 'Philosopher';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+}
+
+.greeting__subtitle {
+  max-width: 550px;
+  margin: 0 0 60px 0;
+  font-weight: 300;
+
+  span {
+    display: block;
+    margin: 0 0 40px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.greeting__bottom {
+  display: flex;
+
+  img {
+    margin: 0 25px 0 70px;
+    max-height: 80px;
+  }
+}
+
+.greeting__signa {
+}
+
+.greeting__person {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting__person-name {
+  margin: 0 0 5px 0;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.greeting__person-desc {
+  margin: 0 0 15px 0;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.greeting__socials {
+  display: flex;
+}
+
+.greeting__socials-item {
+  margin: 0 10px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.greeting__socials-link {}
+
+.greeting__image {
+  position: absolute;
+  top: -70px;
+  right: 0;
 }
