@@ -98,13 +98,20 @@ a {
 @font-face {
   font-family: "TT Norms";
   src: local("TT Norms"), url(../fonts/TTNorms-Medium.woff) format("woff"), url(../fonts/TTNorms-Medium.woff2) format("woff2"), url(../fonts/TTNorms-Medium.eot) format("eot");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "TT Norms";
   src: local("TT Norms"), url(../fonts/TTNorms-Regular.woff) format("woff"), url(../fonts/TTNorms-Regular.woff2) format("woff2"), url(../fonts/TTNorms-Regular.eot) format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Norms";
+  src: local("TT Norms"), url(../fonts/TTNorms-Light.woff) format("woff"), url(../fonts/TTNorms-Light.woff2) format("woff2"), url(../fonts/TTNorms-Light.eot) format("eot");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -153,16 +160,14 @@ body {
   display: inline-block;
   background: #fff;
   color: #8C8C8C;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
-  line-height: 21px;
   border-radius: 10px;
   padding: 38px 65px;
   white-space: nowrap;
   transition: all 0.3s;
 }
 .button__empty:hover {
-  scale: 1.025;
   transition: all 0.3s;
 }
 
@@ -173,6 +178,10 @@ header {
 .main__greeting {
   padding: 180px 0 100px 0;
   background: url(../images/bg/greeting-bgg.png) 50% 50%/cover no-repeat;
+}
+
+.main__reviews {
+  padding: 110px 0 0 0;
 }
 
 /* ==================================================================== */
@@ -207,6 +216,13 @@ header {
 }
 .header__socials-item:last-child {
   margin-right: 17px;
+}
+.header__socials-item img {
+  transition: all 0.3s;
+}
+.header__socials-item :hover img {
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
 
 .header__body-inner {
@@ -261,9 +277,12 @@ header {
   bottom: 15px;
   right: 35px;
 }
+.header__row-item svg path {
+  transition: all 0.3s;
+}
 .header__row-item:hover svg path {
   transition: all 0.3s;
-  fill: #074ef3;
+  fill: #0736a5;
 }
 
 .header__item-content {
@@ -316,12 +335,17 @@ header {
 .greeting__subtitle {
   max-width: 550px;
   margin: 0 0 60px 0;
-  font-weight: 300;
+  font-weight: 500;
 }
-.greeting__subtitle span {
-  display: block;
+.greeting__subtitle .greeting__subtitle-item {
+  font-weight: 700;
   margin: 0 0 40px 0;
   text-transform: uppercase;
+}
+.greeting__subtitle .greeting__subtitle-item:last-child {
+  margin: 0;
+  text-transform: none;
+  font-weight: 400;
 }
 
 .greeting__bottom {
@@ -436,6 +460,15 @@ header {
 .rec__buttons-left {
   margin-right: 20px;
 }
+.rec__buttons-left input::-moz-placeholder {
+  opacity: 0.5;
+}
+.rec__buttons-left input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.rec__buttons-left input::placeholder {
+  opacity: 0.5;
+}
 
 .rec__buttons-right .button {
   padding: 40px 55px;
@@ -446,4 +479,72 @@ header {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* ============================== REWIEWS ============================== */
+.reviews__top {
+  margin: 0 0 50px 0;
+}
+
+.reviews__top-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+}
+
+.reviews__title {
+  font-family: "Philosopher";
+  font-size: 48px;
+  line-height: 110%;
+  margin: 0 0 30px 0;
+}
+
+.reviews__subtitle {
+  font-weight: 300;
+  font-size: 22px;
+  color: #212225;
+}
+
+.reviews__row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 610px;
+}
+
+.reviews__row-item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  margin-right: 35px;
+}
+.reviews__row-item span {
+  font-size: 16px;
+  line-height: 130%;
+}
+.reviews__row-item:last-child {
+  margin: 0;
+  flex-direction: row;
+}
+.reviews__row-item:last-child .reviews__row-item-number {
+  margin: 0 17px 0 0;
+}
+.reviews__row-item:last-child .reviews__row-item-text {
+  padding: 20px 0 0 0;
+}
+
+.reviews__row-item-number {
+  font-family: "Philosopher";
+  font-weight: 700;
+  line-height: 130%;
+  font-size: 70px;
+  color: #487BDE;
+  white-space: nowrap;
+  text-align: center;
 }

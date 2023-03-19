@@ -7,6 +7,7 @@
 /* ==================================================================== */
 
 /* ============================== HEADER ============================== */
+
 .header__top {
   margin: 0 0 65px;
 }
@@ -41,6 +42,16 @@
 
   &:last-child {
     margin-right: 17px;
+  }
+
+  img {
+    transition: all .3s;
+
+  }
+
+  :hover img {
+    transform: scale(1.1);
+    transition: all .3s;
   }
 }
 
@@ -107,9 +118,13 @@
     right: 35px;
   }
 
+  svg path {
+    transition: all .3s;
+  }
+
   &:hover svg path {
     transition: all .3s;
-    fill: #074ef3;
+    fill: #0736a5;
   }
 }
 
@@ -167,12 +182,18 @@
 .greeting__subtitle {
   max-width: 550px;
   margin: 0 0 60px 0;
-  font-weight: 300;
+  font-weight: 500;
 
-  span {
-    display: block;
+  .greeting__subtitle-item {
+    font-weight: 700;
     margin: 0 0 40px 0;
     text-transform: uppercase;
+
+    &:last-child {
+      margin: 0;
+      text-transform: none;
+      font-weight: 400;
+    }
   }
 }
 
@@ -295,6 +316,10 @@
 
 .rec__buttons-left {
   margin-right: 20px;
+
+  input::placeholder {
+    opacity: 0.5;
+  }
 }
 
 .rec__buttons-right {
@@ -311,3 +336,84 @@
     object-fit: cover;
   }
 }
+
+/* ============================== REWIEWS ============================== */
+
+
+
+.reviews {}
+
+.reviews__top {
+  margin: 0 0 50px 0;
+}
+
+.reviews__top-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+}
+
+.reviews__title {
+  font-family: 'Philosopher';
+  font-size: 48px;
+  line-height: 110%;
+  margin: 0 0 30px 0;
+}
+
+.reviews__subtitle {
+  font-weight: 300;
+  font-size: 22px;
+  color: #212225;
+}
+
+.reviews__row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 610px;
+}
+
+.reviews__row-item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  margin-right: 35px;
+
+  span {
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  &:last-child {
+    margin: 0;
+    flex-direction: row;
+
+    .reviews__row-item-number {
+      margin: 0 17px 0 0;
+    }
+
+    .reviews__row-item-text {
+      padding: 20px 0 0 0;
+    }
+  }
+
+
+}
+
+.reviews__row-item-number {
+  font-family: 'Philosopher';
+  font-weight: 700;
+  line-height: 130%;
+  font-size: 70px;
+  color: #487BDE;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.reviews__row-item-text {}

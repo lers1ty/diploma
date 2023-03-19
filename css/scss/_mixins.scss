@@ -13,3 +13,7 @@
 //     padding: #{$tb + "px"} #{$lr + "px"};
 //   }
 // }
+
+@mixin dd {
+  background-color: red;
+}
