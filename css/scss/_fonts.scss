@@ -25,6 +25,17 @@
 @font-face {
   font-family: "TT Norms";
   src: local("TT Norms"),
+    url(../fonts/TTNorms-ExtraBold.woff) format('woff'),
+    url(../fonts/TTNorms-ExtraBold.woff2) format('woff2'),
+    url(../fonts/TTNorms-ExtraBold.eot) format('eot');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: local("TT Norms"),
     url(../fonts/TTNorms-Bold.woff) format('woff'),
     url(../fonts/TTNorms-Bold.woff2) format('woff2'),
     url(../fonts/TTNorms-Bold.eot) format('eot');

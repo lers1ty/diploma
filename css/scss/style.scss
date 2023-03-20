@@ -340,7 +340,6 @@
 /* ============================== REWIEWS ============================== */
 
 
-
 .reviews {}
 
 .reviews__top {
@@ -402,8 +401,6 @@
       padding: 20px 0 0 0;
     }
   }
-
-
 }
 
 .reviews__row-item-number {
@@ -417,3 +414,73 @@
 }
 
 .reviews__row-item-text {}
+
+.reviews__main {}
+
+.reviews__slider {
+  display: flex;
+  margin: 0 -15px;
+  min-width: 0;
+}
+
+.reviews__slider {
+
+}
+.reviews__slide {
+  display: flex;
+  flex-direction: column;
+  max-width: 367px;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
+}
+
+
+.reviews__slide-content {
+  padding: 40px 30px;
+}
+
+.reviews__person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reviews__image-box {
+  margin-right: 15px;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.reviews__info {}
+
+.reviews__name {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.reviews__position {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.reviews__goal {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 15px;
+
+  span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+}
+
+.reviews__desc {
+  font-weight: 300;
+}
