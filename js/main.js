@@ -1,8 +1,7 @@
 new Swiper('.reviews__slider', {
   spaceBetween: 20,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   loop: true,
-  loopedSlides: 2,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
