@@ -46,7 +46,6 @@
 
   img {
     transition: all .3s;
-
   }
 
   :hover img {
@@ -330,7 +329,6 @@
 
 .rec__content-image {
   img {
-
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -344,11 +342,14 @@
 
 .reviews__top {
   margin: 0 0 50px 0;
+
 }
 
 .reviews__top-inner {
   display: flex;
   justify-content: space-between;
+  position: relative;
+
 }
 
 .reviews__text {
@@ -417,22 +418,20 @@
 
 .reviews__main {}
 
-.reviews__slider {
-  display: flex;
-  margin: 0 -15px;
-  min-width: 0;
+.reviews__slider {}
+
+.slick-list {
+  .reviews__slide {
+    margin: 0 15px;
+    box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
+  }
 }
 
-.reviews__slider {
 
-}
 .reviews__slide {
-  max-width: 367px;
-  height: 100%;
+  height: 750px;
   border-radius: 20px;
-  box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
 }
-
 
 .reviews__slide-content {
   padding: 40px 30px;
@@ -448,11 +447,16 @@
   margin-right: 15px;
 
   img {
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
   }
 }
 
-.reviews__info {}
+.reviews__info {
+  display: flex;
+  flex-direction: column;
+}
 
 .reviews__name {
   margin-bottom: 4px;
@@ -482,3 +486,92 @@
 .reviews__desc {
   font-weight: 300;
 }
+
+.reviews__arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 110px;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  svg path {
+    transition: all .3s;
+  }
+}
+
+.arrow-prev {
+  position: relative;
+  transform: rotate(360deg);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #F6F8FB;
+    z-index: -1;
+  }
+
+  &:hover svg path {
+    fill: #0736a5;
+  }
+}
+
+.arrow-next {
+  position: relative;
+  transform: rotate(180deg);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #F6F8FB;
+    z-index: -1;
+  }
+
+  &:hover svg path {
+    fill: #487BDE;
+    transition: all .3s;
+  }
+}
+
+.reviews__bottom {
+  padding: 80px 0 0 0;
+  text-align: center;
+}
+
+.reviews__bottom-text {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+// _________________________________SLICK_______________________________ //
+.reviews__slider-wrapper {
+  width: 100%; //we need more width for the shadows on the edges
+  padding: 0 0 80px 15px; //space for the shadows
+  margin-left: -15px; //put the div in its original position
+  overflow: hidden; //hide the overflow
+}
+.slick-list {
+overflow: visible;
+}
+
+// ____________________________________________________________________ //

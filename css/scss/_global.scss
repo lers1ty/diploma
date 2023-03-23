@@ -38,6 +38,7 @@ body {
     transition: all .3s;
   }
 }
+
 .button__empty {
   display: inline-block;
   background: #fff;
@@ -48,13 +49,23 @@ body {
   padding: 38px 65px;
   white-space: nowrap;
   transition: all .3s;
+
   &:hover {
     transition: all .3s;
   }
 }
-.swiper {
-  width: 1100px;
+
+// _________________________________SLICK_______________________________ //
+.reviews__slider-wrapper {
+    width: 100%; //we need more width for the shadows on the edges
+    padding: 0 0 80px 15px; //space for the shadows
+    margin-left: -15px; //put the div in its original position
+    overflow: hidden; //hide the overflow
 }
+.slick-list {
+  overflow: visible;
+}
+
 
 // ____________________________________________________________________ //
 
@@ -67,9 +78,8 @@ header {
   background: url(../images/bg/greeting-bgg.png) 50% 50% / cover no-repeat;
 }
 
-.main__rec {
-  
-}
+.main__rec {}
+
 .main__reviews {
   padding: 110px 0 0 0;
 }

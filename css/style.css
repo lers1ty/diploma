@@ -178,8 +178,15 @@ body {
   transition: all 0.3s;
 }
 
-.swiper {
-  width: 1100px;
+.reviews__slider-wrapper {
+  width: 100%;
+  padding: 0 0 80px 15px;
+  margin-left: -15px;
+  overflow: hidden;
+}
+
+.slick-list {
+  overflow: visible;
 }
 
 header {
@@ -500,6 +507,7 @@ header {
 .reviews__top-inner {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .reviews__text {
@@ -560,17 +568,14 @@ header {
   text-align: center;
 }
 
-.reviews__slider {
-  display: flex;
-  margin: 0 -15px;
-  min-width: 0;
+.slick-list .reviews__slide {
+  margin: 0 15px;
+  box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
 }
 
 .reviews__slide {
-  max-width: 367px;
-  height: 100%;
+  height: 750px;
   border-radius: 20px;
-  box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
 }
 
 .reviews__slide-content {
@@ -587,7 +592,14 @@ header {
   margin-right: 15px;
 }
 .reviews__image-box img {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
+}
+
+.reviews__info {
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__name {
@@ -615,4 +627,85 @@ header {
 
 .reviews__desc {
   font-weight: 300;
+}
+
+.reviews__arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 110px;
+}
+.reviews__arrows a {
+  display: flex;
+  align-items: center;
+}
+.reviews__arrows svg path {
+  transition: all 0.3s;
+}
+
+.arrow-prev {
+  position: relative;
+  transform: rotate(360deg);
+}
+.arrow-prev::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #F6F8FB;
+  z-index: -1;
+}
+.arrow-prev:hover svg path {
+  fill: #0736a5;
+}
+
+.arrow-next {
+  position: relative;
+  transform: rotate(180deg);
+}
+.arrow-next::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #F6F8FB;
+  z-index: -1;
+}
+.arrow-next:hover svg path {
+  fill: #487BDE;
+  transition: all 0.3s;
+}
+
+.reviews__bottom {
+  padding: 80px 0 0 0;
+  text-align: center;
+}
+
+.reviews__bottom-text {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.reviews__slider-wrapper {
+  width: 100%;
+  padding: 0 0 80px 15px;
+  margin-left: -15px;
+  overflow: hidden;
+}
+
+.slick-list {
+  overflow: visible;
 }

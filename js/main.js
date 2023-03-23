@@ -1,14 +1,8 @@
-new Swiper('.reviews__slider', {
-  spaceBetween: 20,
-  slidesPerView: 'auto',
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-})
-
+$('.reviews__slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  appendArrows: ('.reviews__arrows'),
+  prevArrow: $('.arrow-prev'),
+  nextArrow: $('.arrow-next'),
+});
