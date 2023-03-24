@@ -423,18 +423,17 @@
 .slick-list {
   .reviews__slide {
     margin: 0 15px;
-    box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
   }
 }
 
 
 .reviews__slide {
-  height: 750px;
+  min-height: 785px;
   border-radius: 20px;
 }
 
 .reviews__slide-content {
-  padding: 40px 30px;
+  padding: 40px 25px;
 }
 
 .reviews__person {
@@ -493,7 +492,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 110px;
+  width: 155px;
 
   a {
     display: flex;
@@ -506,45 +505,32 @@
 }
 
 .arrow-prev {
-  position: relative;
-  transform: rotate(360deg);
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: #F6F8FB;
-    z-index: -1;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F8FB;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
 
   &:hover svg path {
-    fill: #0736a5;
+    fill: #487BDE;
+    transition: all .3s;
   }
 }
 
 .arrow-next {
-  position: relative;
   transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F8FB;
+  top: 50%;
+  left: 50%;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: #F6F8FB;
-    z-index: -1;
-  }
 
   &:hover svg path {
     fill: #487BDE;
@@ -553,7 +539,7 @@
 }
 
 .reviews__bottom {
-  padding: 80px 0 0 0;
+  padding: 80px 0 120px 0;
   text-align: center;
 }
 
@@ -566,12 +552,182 @@
 // _________________________________SLICK_______________________________ //
 .reviews__slider-wrapper {
   width: 100%; //we need more width for the shadows on the edges
-  padding: 0 0 80px 15px; //space for the shadows
-  margin-left: -15px; //put the div in its original position
+  padding: 0 35px 80px 35px; //space for the shadows
+  margin-left: -35px; //put the div in its original position
   overflow: hidden; //hide the overflow
 }
+
 .slick-list {
-overflow: visible;
+  overflow: visible;
+}
+
+.slick-slide {
+  transition: box-shadow 0.1s ease-in-out; //little effect to fade the shadow
+}
+
+.slick-slide.slick-active {
+  box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
 }
 
 // ____________________________________________________________________ //
+
+/* ============================== ANSWER ============================== */
+
+.answer {}
+
+.answer__inner {
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.answer__title {
+  font-family: 'Philosopher';
+  font-size: 48px;
+  line-height: 110%;
+  margin-bottom: 20px;
+}
+
+.answer__subtitle {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.answer__row {
+  padding: 80px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer__image-box {
+  margin-bottom: 30px;
+  background-color: #CBB47A;
+  border-radius: 20%;
+}
+
+.answer__row-item {
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+/* ============================== TOP12 ============================== */
+
+
+.top12 {}
+
+.top12__inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: #FFF;
+}
+
+.top12__heading {
+  font-family: 'Philosopher';
+  font-size: 48px;
+  line-height: 110%;
+  margin-bottom: 80px;
+  max-width: 670px;
+}
+
+.top12__grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3,1fr);
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+
+.top12__grid-item {}
+
+.item__bg {
+  padding: 70px 0px;
+  background: url(../images/top12/2.jpg) 0 0 / 100% no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+
+.item__inner {
+  padding: 0 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFF;
+  
+}
+
+.item__top {
+  padding: 8px 13px 0 13px;
+  background: #FF7A00;
+  border-radius: 6px;
+  display: flex;
+  white-space: nowrap;
+
+}
+
+.item__top-icon {
+  margin-right: 5px;
+}
+
+.item__top-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.item__main {}
+
+.item__main-text {
+  font-family: 'Philosopher';
+  font-size: 32px;
+  line-height: 50px;
+}
+
+.item__main-line {
+  background-color: #CBB47A;
+  height: 4px;
+  max-width: 210px;
+}
+
+.item__bottom {}
+
+.item__bottom-text {
+  font-weight: 500;
+  font-size: 13px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background-image: url(../images/icons/top12/location-icon.svg);
+    left: -7px;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.top12__bottom {
+  text-align: center;
+  max-width: 800px;
+}
+
+.top12__bottom-title {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.top12__bottom-subtitle {
+  font-weight: 400;
+}

@@ -55,19 +55,6 @@ body {
   }
 }
 
-// _________________________________SLICK_______________________________ //
-.reviews__slider-wrapper {
-    width: 100%; //we need more width for the shadows on the edges
-    padding: 0 0 80px 15px; //space for the shadows
-    margin-left: -15px; //put the div in its original position
-    overflow: hidden; //hide the overflow
-}
-.slick-list {
-  overflow: visible;
-}
-
-
-// ____________________________________________________________________ //
 
 header {
   background: url(../images/bg/header-bg.jpg) 50% 50% / cover no-repeat;
@@ -82,4 +69,14 @@ header {
 
 .main__reviews {
   padding: 110px 0 0 0;
+}
+
+.main__answer {
+  background: #F6F8FB;
+}
+
+.main__top12 {
+  padding: 120px 0;
+  background: linear-gradient(101.79deg, #2D334A 6.04%, #38405C 23.09%, #2D334A 38.75%, #38405C 50.27%, #2D334A 62.7%, #2D334A 65.93%, #38405C 80.67%, #2D334A 94.49%);
+
 }
