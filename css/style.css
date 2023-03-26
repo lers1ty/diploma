@@ -171,12 +171,24 @@ body {
   font-weight: 500;
   font-size: 18px;
   border-radius: 10px;
-  padding: 38px 65px;
+  padding: 36px 65px;
   white-space: nowrap;
   transition: all 0.3s;
+  border: 2px solid #e4ecf7;
+  margin-right: 20px;
 }
-.button-empty:hover {
-  transition: all 0.3s;
+.button-empty input::-moz-placeholder {
+  opacity: 0.5;
+}
+.button-empty input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.button-empty input::placeholder {
+  opacity: 0.5;
+}
+
+.button-box {
+  display: flex;
 }
 
 header {
@@ -201,8 +213,16 @@ header {
   background: linear-gradient(101.79deg, #2D334A 6.04%, #38405C 23.09%, #2D334A 38.75%, #38405C 50.27%, #2D334A 62.7%, #2D334A 65.93%, #38405C 80.67%, #2D334A 94.49%);
 }
 
+.main__section-wrapper {
+  background: url(../images/bg/more-bg.jpg) 50% 50%/100% no-repeat;
+}
+
 .main__more {
-  background-color: #F6F8FB;
+  padding: 0 0 80px 0;
+}
+
+.main__cashback {
+  padding: 0 0 110px 0;
 }
 
 /* ==================================================================== */
@@ -433,6 +453,9 @@ header {
   flex-direction: column;
   max-width: 700px;
 }
+.rec__content .button {
+  padding: 40px 53px;
+}
 
 .rec__content-text {
   margin-bottom: 30px;
@@ -474,32 +497,22 @@ header {
   line-height: 140%;
 }
 
-.rec__buttons {
-  display: flex;
+.button-box {
+  margin: 25px 0;
+}
+.button-box .button {
+  padding: 40px 80px;
 }
 
-.rec__buttons-left {
-  margin-right: 20px;
+.rec__content-image {
+  height: 470px;
+  width: 540px;
 }
-.rec__buttons-left input::-moz-placeholder {
-  opacity: 0.5;
-}
-.rec__buttons-left input:-ms-input-placeholder {
-  opacity: 0.5;
-}
-.rec__buttons-left input::placeholder {
-  opacity: 0.5;
-}
-
-.rec__buttons-right .button {
-  padding: 40px 55px;
-}
-
 .rec__content-image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* ============================== Reviews ============================== */
@@ -1017,14 +1030,24 @@ header {
   border-radius: 50%;
   transition: all 0.3s;
 }
+.more__download svg path {
+  transition: all 0.3s;
+}
 .more__download:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all 0.3s;
 }
+.more__download:hover svg path {
+  fill: #f7f0f0;
+  transition: all 0.3s;
+}
 .more__download:active {
   transform: scale(0.95);
   transition: all 0.3s;
+}
+.more__download:active svg path {
+  fill: normal;
 }
 
 .more__download-text {
@@ -1039,16 +1062,43 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   max-width: 430px;
+  height: 100%;
   padding: 70px 40px;
   text-align: center;
   background: #FFFFFF;
   border-radius: 20px;
   transition: all 0.3s;
+  z-index: 999;
+  border: 2px solid;
 }
 .more__form:hover {
-  box-shadow: 0px 50px 130px rgba(26, 29, 33, 0.1);
+  box-shadow: 0px 50px 130px rgba(26, 29, 33, 0.3);
   transition: all 0.3s;
+}
+.more__form .button-box {
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.more__form .button-box .button-empty {
+  padding: 35px 72px;
+  margin: 0;
+}
+.more__form .button-box .button {
+  padding: 35px 38px;
+  margin-top: 20px;
+}
+.more__form::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  top: -8px;
+  height: 20px;
+  background: #CBB47A;
+  border-radius: 20px;
+  z-index: -999;
 }
 
 .more__form-title {
@@ -1059,21 +1109,104 @@ header {
   color: #212225;
 }
 
-.form__buttons {
-  margin: 20px 0;
-}
-.form__buttons .button-empty {
-  padding: 35px 72px;
-  border: 2px solid #e4ecf7;
-}
-.form__buttons .button {
-  padding: 35px 38px;
-  margin: 20px 0;
-}
-
 .more__form-bottom {
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
   color: rgba(33, 34, 37, 0.5);
+}
+
+/* ============================== More ============================== */
+.cashback__wrapper {
+  background: linear-gradient(98.97deg, #DDE4F4 26.52%, #B7C4E4 83.69%);
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 20px;
+  padding: 110px 0 0 120px;
+}
+
+.cashback__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cashback__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+}
+
+.cashback__text {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.cashback__title {
+  font-family: "Philosopher";
+  line-height: 110%;
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.cashback__title span {
+  font-size: 48px;
+  color: #212225;
+  font-weight: 700;
+}
+
+.cashback__subtitle {
+  max-width: 630px;
+}
+
+.cashback__garant {
+  position: absolute;
+  right: -160px;
+  transform: translate(-50%, -50%);
+}
+
+.cashback__garant-icon {
+  background: url(../images/icons/garant-icon.svg) 0 0/100% no-repeat;
+  width: 41px;
+  height: 40px;
+}
+
+.cashback__middle {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.cashback__middle .button-box .button {
+  padding: 40px 45px;
+}
+.cashback__middle p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.3;
+}
+
+.cashback__garant {
+  width: 160px;
+  height: 160px;
+  padding: 38px 0;
+  background: linear-gradient(151.59deg, #CBB47A 15.16%, #E0C98E 46.05%, #CBB47A 89.32%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.cashback__garant-text {
+  text-align: center;
+  max-width: 95px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.cashback__image-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }

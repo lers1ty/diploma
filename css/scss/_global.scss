@@ -47,15 +47,21 @@ body {
   font-weight: 500;
   font-size: 18px;
   border-radius: 10px;
-  padding: 38px 65px;
+  padding: 36px 65px;
   white-space: nowrap;
   transition: all .3s;
+  border: 2px solid #e4ecf7;
+  margin-right: 20px;
 
-  &:hover {
-    transition: all .3s;
+  input::placeholder {
+    opacity: 0.5;
   }
+
 }
 
+.button-box {
+  display: flex;
+}
 
 header {
   background: url(../images/bg/header-bg.jpg) 50% 50% / cover no-repeat;
@@ -81,8 +87,14 @@ header {
   background: linear-gradient(101.79deg, #2D334A 6.04%, #38405C 23.09%, #2D334A 38.75%, #38405C 50.27%, #2D334A 62.7%, #2D334A 65.93%, #38405C 80.67%, #2D334A 94.49%);
 }
 
-.main__more {
-  background-color: #F6F8FB;
-  // background: url(../images/bg/1.jpg) 50% 20% / cover no-repeat;
+.main__section-wrapper {
+  background: url(../images/bg/more-bg.jpg) 50% 50% / 100% no-repeat;
+}
 
+.main__more {
+  padding: 0 0 80px 0;
+}
+
+.main__cashback {
+  padding: 0 0 110px 0;
 }
