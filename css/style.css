@@ -174,7 +174,7 @@ body {
   padding: 36px 65px;
   white-space: nowrap;
   transition: all 0.3s;
-  border: 2px solid #e4ecf7;
+  border: 4px solid #e4ecf7;
   margin-right: 20px;
 }
 .button-empty input::-moz-placeholder {
@@ -213,7 +213,7 @@ header {
   background: linear-gradient(101.79deg, #2D334A 6.04%, #38405C 23.09%, #2D334A 38.75%, #38405C 50.27%, #2D334A 62.7%, #2D334A 65.93%, #38405C 80.67%, #2D334A 94.49%);
 }
 
-.main__section-wrapper {
+.main__sections-wrapper {
   background: url(../images/bg/more-bg.jpg) 50% 50%/100% no-repeat;
 }
 
@@ -1062,7 +1062,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   max-width: 430px;
   height: 100%;
   padding: 70px 40px;
@@ -1070,8 +1069,7 @@ header {
   background: #FFFFFF;
   border-radius: 20px;
   transition: all 0.3s;
-  z-index: 999;
-  border: 2px solid;
+  border-top: 9px solid #CBB47A;
 }
 .more__form:hover {
   box-shadow: 0px 50px 130px rgba(26, 29, 33, 0.3);
@@ -1089,16 +1087,6 @@ header {
 .more__form .button-box .button {
   padding: 35px 38px;
   margin-top: 20px;
-}
-.more__form::before {
-  content: "";
-  position: absolute;
-  width: 380px;
-  top: -8px;
-  height: 20px;
-  background: #CBB47A;
-  border-radius: 20px;
-  z-index: -999;
 }
 
 .more__form-title {
@@ -1209,4 +1197,118 @@ header {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+/* ============================== Advantages ============================== */
+.advantages__main {
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.advantages__content {
+  max-width: 710px;
+}
+
+.advantages__text {
+  margin-bottom: 25px;
+}
+
+.advantages__title {
+  font-family: "Philosopher";
+  font-size: 48px;
+  line-height: 110%;
+  color: #212225;
+  margin-bottom: 20px;
+}
+
+.advantages__subtitle {
+  font-weight: 400;
+  font-size: 22px;
+  color: #212225;
+  max-width: 600px;
+}
+
+.advantages__middle-item {
+  margin-bottom: 25px;
+}
+.advantages__middle-item:last-child {
+  margin: 0;
+}
+
+.advantages__item-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.advantages__item-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.advantages__image-box {
+  max-width: 700px;
+  position: absolute;
+  top: 0;
+  right: -225px;
+  z-index: -1;
+}
+.advantages__image-box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.advantages__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.advantages__row-item {
+  padding: 35px 20px;
+  display: flex;
+  max-width: 370px;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #F6F8FB;
+  transition: all 0.5s;
+}
+.advantages__row-item:hover {
+  box-shadow: 0px 0px 21px 8px rgba(34, 60, 80, 0.2);
+  transition: all 0.3s;
+}
+
+.advantages__row-item-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  max-width: 350px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 135%;
+}
+.advantages__row-item-heading span {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 15px;
+  font-family: "Philosopher";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  color: #CBB47A;
+  text-transform: uppercase;
+}
+
+.advantages__row-item-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.advantages__bottom {
+  display: flex;
+  justify-content: center;
 }
