@@ -158,6 +158,7 @@ body {
   border-radius: 10px;
   padding: 40px 80px;
   transition: all 0.3s;
+  text-align: center;
 }
 .button:hover {
   scale: 1.025;
@@ -223,6 +224,15 @@ header {
 
 .main__cashback {
   padding: 0 0 110px 0;
+}
+
+.main__advantages {
+  padding: 0 0 120px 0;
+}
+
+.main__help {
+  padding: 120px 0 120px 0;
+  background: linear-gradient(101.79deg, #2D334A 6.04%, #38405C 23.09%, #2D334A 38.75%, #38405C 50.27%, #2D334A 62.7%, #2D334A 65.93%, #38405C 80.67%, #2D334A 94.49%);
 }
 
 /* ==================================================================== */
@@ -1311,4 +1321,89 @@ header {
 .advantages__bottom {
   display: flex;
   justify-content: center;
+}
+
+/* ============================== Help ============================== */
+.help__heading {
+  color: #FFF;
+  margin-bottom: 50px;
+  font-family: "Philosopher";
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.help__grid {
+  display: grid;
+  grid-template: repeat(2, auto)/repeat(2, auto);
+  gap: 40px;
+}
+
+.help__grid-item {
+  padding: 37px 37px 300px 37px;
+  max-width: 560px;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.help__grid-item:hover {
+  box-shadow: 0px 4px 100px rgb(26, 29, 33);
+  transition: all 0.3s;
+}
+
+.help-item__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 5;
+}
+
+.help-item__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 128%;
+  color: #212225;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.help-item__subtitle {
+  margin-bottom: 40px;
+}
+
+.help-item__text {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.help-item__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.help-item__button {
+  padding: 16px 23px;
+  background: linear-gradient(91.34deg, #F5F0E2 5.45%, #ECE3CC 100%);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.help-item__image-box {
+  position: absolute;
+  left: -40px;
+  bottom: -310px;
+  z-index: -2;
+}
+.help-item__image-box img {
+  width: 107%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }

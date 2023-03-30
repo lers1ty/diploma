@@ -1269,6 +1269,99 @@
 .advantages__bottom {
    display: flex;
    justify-content: center;
+}
+
+/* ============================== Help ============================== */
 
 
+.help__heading {
+   color: #FFF;
+   margin-bottom: 50px;
+   font-family: 'Philosopher';
+   font-size: 48px;
+   line-height: 110%;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.help__grid {
+   display: grid;
+   grid-template: repeat(2, auto) / repeat(2, auto);
+   gap: 40px;
+}
+
+.help__grid-item {
+   padding: 37px 37px 300px 37px;
+   max-width: 560px;
+   height: 100%;
+   background: #FFFFFF;
+   border-radius: 20px;
+   overflow: hidden;
+   transition: all .3s;
+
+   &:hover {
+      box-shadow: 0px 4px 100px rgba(26, 29, 33, 1);
+      transition: all .3s;
+
+   }
+}
+
+
+.help-item__inner {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+   z-index: 5;
+}
+
+.help-item__heading {}
+
+.help-item__title {
+   font-weight: 400;
+   font-size: 36px;
+   line-height: 128%;
+   color: #212225;
+   margin-bottom: 25px;
+   text-transform: uppercase;
+}
+
+.help-item__subtitle {
+   margin-bottom: 40px;
+}
+
+.help-item__text {
+   font-weight: 400;
+   font-size: 16px;
+   margin-bottom: 30px;
+}
+
+.help-item__buttons {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+   .button {}
+}
+
+.help-item__button {
+   padding: 16px 23px;
+   background: linear-gradient(91.34deg, #F5F0E2 5.45%, #ECE3CC 100%);
+   border-radius: 10px;
+   text-align: center;
+   font-size: 22px;
+   margin-bottom: 20px;
+}
+
+.help-item__image-box {
+   position: absolute;
+   left: -40px;
+   bottom: -310px;
+   z-index: -2;
+
+   img {
+      width: 107%;
+      object-fit: contain;
+   }
 }
