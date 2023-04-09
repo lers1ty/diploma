@@ -9,6 +9,8 @@
    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
    <link rel="stylesheet" href="./css/style.css">
    <title>Diploma</title>
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=6dcbe37e-9799-46c9-91df-a673c891f85c&lang=ru_RU"
+      type="text/javascript"></script>
 </head>
 
 <body>
@@ -35,7 +37,7 @@
                            </a>
                         </li>
                      </ul>
-                     <a href="tel:+7(800)555-55-55">
+                     <a href="tel:+7800555-55-55">
                         +7 (800) 555-55-55
                      </a>
                   </div>
@@ -58,8 +60,8 @@
                   <div class="header__btn">
                      <a class="button" href="#">Подобрать лучший объект</a>
                   </div>
-                  <ul class="header__row">
-                     <li class="header__row-item">
+                  <div class="header__row">
+                     <div class="header__row-item">
                         <div class="header__item-content">
                            <div class="header__item-title">Подберем лучшую недвижимость под ваши задачи</div>
                            <div class="header__item-subtitle">В базе 1 000+ объектов, напрямую от надежных застройщиков
@@ -80,10 +82,10 @@
                               </clipPath>
                            </defs>
                         </svg>
-                     </li>
-                     <li class="header__row-item">
+                     </div>
+                     <div class="header__row-item">
                         <div class="header__item-content">
-                           <div class="header__item-title">Сэкономим <br> вам до 4 000 000 <br> рублей</div>
+                           <div class="header__item-title">Сэкономим  вам до<br> 4 000 000  рублей</div>
                            <div class="header__item-subtitle">Закрытые предложения застройщиков. Кэшбэк 1% или оплата
                               авиабилета
                            </div>
@@ -100,10 +102,10 @@
                               </clipPath>
                            </defs>
                         </svg>
-                     </li>
-                     <li class="header__row-item">
+                     </div>
+                     <div class="header__row-item">
                         <div class="header__item-content">
-                           <div class="header__item-title"><span><img src="images/icons/0.svg" alt=""></span> комиссия
+                           <div class="header__item-title"><span>0</span> %    комиссия
                            </div>
                            <div class="header__item-subtitle">Для вас все услуги бесплатные, нам платит застройщик, при
                               заключении
@@ -124,8 +126,8 @@
                               d="M22.9135 44.4559H3.57007C1.3425 44.4559 0.0100098 43.1335 0.0100098 40.9059C0.0100098 36.8922 0.0100098 32.8772 0.0100098 28.8608V28.2837H26.028C25.8458 28.8527 25.6797 29.4177 25.4772 29.9665C25.3959 30.1126 25.2771 30.2342 25.133 30.3189C24.4708 30.811 23.7964 31.2889 23.1322 31.781C22.5586 32.1789 22.1307 32.7533 21.9136 33.4167C21.6965 34.0802 21.702 34.7964 21.9293 35.4565C22.1521 36.1794 22.3708 36.9084 22.6361 37.6152C22.7857 37.9903 22.782 38.4092 22.6259 38.7816C22.4234 39.3324 22.2817 39.9096 22.0731 40.4604C21.5182 41.9225 21.6782 43.2287 22.9135 44.4559ZM4.89042 36.3171H14.5439V33.1418H4.89447L4.89042 36.3171Z"
                               fill="#487BDE" fill-opacity="0.2" />
                         </svg>
-                     </li>
-                  </ul>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -975,8 +977,132 @@
                </div>
             </div>
          </section>
+         <section class="main__numbers numbers">
+            <div class="container">
+               <div class="numbers__inner">
+                  <div class="numbers__content">
+                     <div class="numbers__text">
+                        <div class="numbers__title">Чем мы можем быть вам полезны после покупки?</div>
+                        <div class="numbers__subtitle">Предоставим вам полный комплекс сопровождения</div>
+                     </div>
+                     <div class="numbers__col">
+                        <div class="numbers__col-item">
+                           <span>01</span> Проконсультируем
+                           о менталитете и укладе жизни
+                        </div>
+                        <div class="numbers__col-item">
+                           <span>02</span> Решим любые вопросы, которые позволят упростить вашу жизнь
+                        </div>
+                        <div class="numbers__col-item">
+                           <span>03</span> Поможем перепродать объект, при необходимости
+                        </div>
+                        <div class="numbers__col-item">
+                           <span>04</span> Поддержим при переезде и организуем заселение
+                        </div>
+                        <div class="numbers__col-item">
+                           <span>05</span> Поможем в сдаче объекта в аренду
+                        </div>
+                     </div>
+                  </div>
+                  <div class="numbers__form">
+                     <div class="numbers__form-title">
+                        Получите консультацию специалиста прямо сейчас
+                     </div>
+                     <form class="button-box" action="#">
+                        <input type="text" class="button-empty" placeholder="Whatsapp или Telegram">
+                        <input type="submit" class="button" name="Submit" value="Получить рекомендации">
+                     </form>
+                     <div class="numbers__form-bottom">
+                        На указанный контакт мы пришлем ссылку на каталог.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="main__map map">
+            <iframe id="map"
+               src="https://yandex.ru/map-widget/v1/?um=constructor%3A5456532ef9316f33684a69046362a53cba55ada04fa88581ab03c04fc630ed3e&amp;source=constructorsource=constructor&iframeSandbox=true&lang=ru_RU&scroll=false&disableZoom=true&disableDragging=true"
+               width="100%" height="750" frameborder="0" scrolling="no">
+            </iframe>
+            <div class="container">
+               <div class="map__inner">
+                  <div class="map__content contact">
+                     <div class="contact__heading">Остались вопросы?</div>
+                     <adress class="contact__info">
+                        <div class="contact__text">Звоните:</div>
+                        <div class="contact__tel">
+                           <div class="contact__icon">
+                              <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M2.68693 0.00512573C2.94942 0.044282 3.19717 0.142216 3.40789 0.290166C3.43598 0.312356 3.46781 0.33455 3.49402 0.358447C4.08389 0.896124 4.67749 1.43209 5.26361 1.97318C5.47132 2.15142 5.60522 2.38952 5.64275 2.6473C5.68027 2.90507 5.61914 3.16676 5.46961 3.38821C5.33645 3.59092 5.12978 3.74488 4.88534 3.82348C4.7093 3.87346 4.54702 3.95718 4.40942 4.06906C4.27183 4.18094 4.16212 4.31836 4.08762 4.4721C3.98194 4.6869 3.964 4.92906 4.03705 5.15486C4.22604 5.74076 4.56124 6.27884 5.01642 6.72694C5.53418 7.28809 6.17115 7.74793 6.889 8.0788C7.18117 8.23757 7.51976 8.31084 7.85904 8.28875C8.07843 8.27371 8.28878 8.20288 8.46621 8.0843C8.64364 7.96572 8.78101 7.80415 8.86272 7.61794C8.95855 7.34941 9.15211 7.11875 9.41138 6.96418C9.63206 6.84107 9.8902 6.7856 10.148 6.80587C10.4058 6.82614 10.6496 6.9211 10.8439 7.07685C11.2053 7.37726 11.5424 7.69816 11.887 8.01394C12.2016 8.3007 12.5274 8.57892 12.8233 8.88275C12.9999 9.07854 13.1008 9.32199 13.1103 9.57535C13.1198 9.8287 13.0373 10.0778 12.8757 10.2841C12.8098 10.37 12.7359 10.4506 12.6547 10.5248C12.3083 10.844 11.9506 11.1547 11.6135 11.479C11.4443 11.6411 11.2411 11.7707 11.0159 11.8602C10.7908 11.9496 10.5483 11.997 10.3027 11.9996C9.76227 12.0068 9.22506 11.9223 8.71853 11.7504C7.722 11.4231 6.78427 10.9629 5.93589 10.3848C4.51359 9.45712 3.24638 8.34632 2.17384 7.0871C1.3591 6.17496 0.71845 5.1444 0.278755 4.03856C0.0803702 3.55543 -0.013732 3.04189 0.00161594 2.52622C0.00433859 2.30542 0.0554635 2.08736 0.151935 1.88481C0.248407 1.68226 0.38828 1.49933 0.563393 1.34676C0.876115 1.07706 1.18137 0.797127 1.47911 0.512073C1.71532 0.246204 2.04689 0.0648611 2.41541 0L2.68693 0.00512573Z"
+                                    fill="#497BDF" />
+                              </svg>
+                           </div>
+                           <a class="contact__tel-number" href="tel:+7800555-55-55">+7 (800) 555-55-55</a>
+                           <div class="contact__tel-socials">
+                              <div class="contact__tel-socials-img">
+                                 <a href="#">
+                                    <img src="images/icons/watts-icon.svg" alt="">
+                                 </a>
+                              </div>
+                              <div class="contact__tel-socials-img">
+                                 <a href="#">
+                                    <img src="images/icons/tg-icon.svg" alt="">
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="contact__addr">
+                           <div class="contact__icon">
+                              <svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M9.99833 4.50766C9.98902 5.05992 9.88529 5.67535 9.57724 6.25444C8.22908 8.78845 6.88113 11.3211 5.53339 13.8525C5.47182 13.97 5.3917 14.0788 5.29552 14.1756C5.12037 14.3489 4.87318 14.3472 4.69742 14.1756C4.60662 14.0867 4.53105 13.9861 4.47321 13.8771C3.11594 11.3018 1.75992 8.72622 0.405139 6.15048C-0.00353143 5.3763 -0.0836509 4.57026 0.0759666 3.73963C0.428119 1.90509 1.94914 0.449525 3.98877 0.0984908C6.00106 -0.248072 7.68667 0.322079 8.96734 1.77541C9.65425 2.55238 9.96107 3.41655 9.99833 4.50766ZM2.17832 4.46629C2.13484 5.83522 3.38818 6.99452 4.95641 7.03756C6.48737 7.07781 7.77797 5.94701 7.81834 4.53058C7.85747 3.15774 6.61593 1.99508 5.04025 1.96546C3.50557 1.93415 2.21745 3.02247 2.17894 4.46629H2.17832Z"
+                                    fill="#497BDF" />
+                              </svg>
+                           </div>
+                           Назми Хаджикадироглу, 9 B, Фыгла, Аланья
+                        </div>
+                     </adress>
+                     <div class="map__logo">
+                        <img src="images/logo/logo-map.svg" alt="logo">
+                     </div>
+                  </div>
+               </div>
+         </section>
       </main>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer__logo">
+                  <img src="images/logo/logo-footer.svg" alt="">
+               </div>
+               <div class="footer__middle">
+                  <div class="footer__middle-title">Эксперты в новостройках турции</div>
+                  <div class="footer__middle-subtitle">Vorobev Realty Group официальный представитель крупнейших
+                     застройщиков с 2020 года.</div>
+               </div>
+               <div class="footer__socials">
+                  <div class="footer__socials-text">
+                     Связь с нами
+                  </div>
+                  <div class="footer__socials-item">
+                     <a href="#">
+                        <img src="images/icons/watts-icon.svg" alt="">
+                     </a>
+                  </div>
+                  <div class="footer__socials-item">
+                     <a href="#">
+                        <img src="images/icons/tg-icon.svg" alt="">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
    </div>
+
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
    <script src="js/main.js"></script>

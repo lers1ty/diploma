@@ -129,7 +129,6 @@ body {
   color: #212225;
   line-height: 150%;
   font-weight: 700;
-  zoom: 0.95;
 }
 
 .wrapper {
@@ -152,11 +151,11 @@ body {
   letter-spacing: 0.1em;
   font-weight: 700;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 97px;
   white-space: nowrap;
   text-transform: uppercase;
   border-radius: 10px;
-  padding: 40px 80px;
+  padding: 0 80px;
   transition: all 0.3s;
   text-align: center;
 }
@@ -171,8 +170,9 @@ body {
   color: #8C8C8C;
   font-weight: 500;
   font-size: 18px;
+  line-height: 89px;
   border-radius: 10px;
-  padding: 36px 65px;
+  padding: 0 65px;
   white-space: nowrap;
   transition: all 0.3s;
   border: 4px solid #e4ecf7;
@@ -235,6 +235,23 @@ header {
   background: linear-gradient(101.79deg, #2D334A 6.04%, #38405C 23.09%, #2D334A 38.75%, #38405C 50.27%, #2D334A 62.7%, #2D334A 65.93%, #38405C 80.67%, #2D334A 94.49%);
 }
 
+.main__numbers {
+  padding: 110px 0 360px 0;
+  background: url(../images/bg/numbers-bg.jpg) 50% 50%/cover no-repeat;
+}
+
+.main__map {
+  padding: 0px 0 185px 0;
+  position: relative;
+}
+.main__map #map {
+  position: absolute;
+}
+
+.footer {
+  padding: 70px 0 60px 0;
+}
+
 /* ==================================================================== */
 /* ============================== Header ============================== */
 .header__top {
@@ -269,6 +286,7 @@ header {
   margin-right: 17px;
 }
 .header__socials-item img {
+  width: 100%;
   transition: all 0.3s;
 }
 .header__socials-item :hover img {
@@ -310,10 +328,6 @@ header {
 
 .header__row-item {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  max-width: 375px;
   border-radius: 20px;
   background-color: #FFF;
   transition: all 0.3s;
@@ -337,7 +351,10 @@ header {
 }
 
 .header__item-content {
-  padding: 50px 95px 70px 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  padding: 40px 50px 90px 50px;
 }
 
 .header__item-title {
@@ -349,9 +366,8 @@ header {
   color: #212225;
 }
 .header__item-title span {
-  display: block;
-  width: 61px;
-  height: 62px;
+  font-weight: 700;
+  font-size: 62px;
 }
 
 .header__item-subtitle {
@@ -439,8 +455,11 @@ header {
 
 .greeting__image {
   position: absolute;
-  top: -70px;
+  bottom: -100px;
   right: 0;
+}
+.greeting__image img {
+  width: 100%;
 }
 
 /* ============================== Rec ============================== */
@@ -464,7 +483,7 @@ header {
   max-width: 700px;
 }
 .rec__content .button {
-  padding: 40px 53px;
+  padding: 0 53px;
 }
 
 .rec__content-text {
@@ -510,13 +529,10 @@ header {
 .button-box {
   margin: 25px 0;
 }
-.button-box .button {
-  padding: 40px 80px;
-}
 
 .rec__content-image {
   height: 470px;
-  width: 540px;
+  width: 520px;
 }
 .rec__content-image img {
   height: 100%;
@@ -718,16 +734,13 @@ header {
   margin-left: -35px;
   overflow: hidden;
 }
-
-.slick-list {
+.reviews__slider-wrapper .slick-list {
   overflow: visible;
 }
-
-.slick-slide {
+.reviews__slider-wrapper .slick-slide {
   transition: box-shadow 0.1s ease-in-out;
 }
-
-.slick-slide.slick-active {
+.reviews__slider-wrapper .slick-slide.slick-active {
   box-shadow: 0px 50px 100px rgba(26, 29, 33, 0.07);
 }
 
@@ -1091,11 +1104,11 @@ header {
   margin: 20px 0;
 }
 .more__form .button-box .button-empty {
-  padding: 35px 72px;
+  padding: 0 72px;
   margin: 0;
 }
 .more__form .button-box .button {
-  padding: 35px 38px;
+  padding: 0 38px;
   margin-top: 20px;
 }
 
@@ -1174,7 +1187,7 @@ header {
   font-size: 18px;
 }
 .cashback__middle .button-box .button {
-  padding: 40px 45px;
+  padding: 0 45px;
 }
 .cashback__middle p {
   font-weight: 400;
@@ -1406,4 +1419,338 @@ header {
   width: 107%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+/* ============================== Numbers ============================== */
+.numbers__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.numbers__content {
+  max-width: 620px;
+}
+
+.numbers__text {
+  max-width: 550px;
+  margin-bottom: 35px;
+}
+
+.numbers__title {
+  font-family: "Philosopher";
+  font-size: 48px;
+  line-height: 110%;
+  margin-bottom: 40px;
+}
+
+.numbers__subtitle {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.numbers__col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.numbers__col :nth-child(2) {
+  order: 3;
+}
+.numbers__col :nth-child(3) {
+  order: 5;
+}
+.numbers__col :nth-child(4) {
+  order: 2;
+}
+.numbers__col :nth-child(5) {
+  order: 4;
+}
+
+.numbers__col-item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 290px;
+  color: #000000;
+}
+.numbers__col-item span {
+  margin-right: 30px;
+  font-family: "Philosopher";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #CBB47A;
+}
+
+.numbers__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 430px;
+  height: 100%;
+  padding: 100px 40px;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 20px;
+  transition: all 0.3s;
+  border-top: 9px solid #CBB47A;
+}
+.numbers__form:hover {
+  box-shadow: 0px 50px 130px rgba(26, 29, 33, 0.3);
+  transition: all 0.3s;
+}
+.numbers__form .button-box {
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.numbers__form .button-box .button-empty {
+  padding: 0 72px;
+  margin: 0;
+}
+.numbers__form .button-box .button {
+  padding: 0 38px;
+  margin-top: 20px;
+}
+
+.numbers__form-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  max-width: 300px;
+  color: #212225;
+}
+
+.numbers__form-bottom {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: rgba(33, 34, 37, 0.5);
+}
+
+/* ===================================================================== */
+/* ============================== Numbers ============================== */
+/* ===================================================================== */
+.map__inner {
+  padding-top: 160px;
+}
+
+.map__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  padding: 75px 60px;
+  background: #FFF;
+  box-shadow: 0px 0px 51px 30px rgba(34, 66, 80, 0.15);
+  border-radius: 20px;
+  position: relative;
+}
+
+.contact__heading {
+  margin-bottom: 15px;
+  font-family: "Philosopher";
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #212225;
+}
+
+.contact__info {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.contact__text {
+  margin-bottom: 12px;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+
+.contact__tel {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.contact__icon {
+  margin-right: 23px;
+}
+
+.contact__tel-number {
+  margin-right: 22px;
+  color: #000000;
+}
+
+.contact__tel-socials {
+  display: flex;
+}
+
+.contact__tel-socials-img:first-child {
+  margin-right: 8px;
+}
+
+.contact__addr {
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  max-width: 235px;
+}
+
+.map__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  width: 110px;
+  background: #FFF;
+  box-shadow: 0px 0px 51px 30px rgba(34, 66, 80, 0.15);
+  border-radius: 10px;
+  position: absolute;
+  top: 35px;
+  right: -200px;
+}
+.map__logo img {
+  width: 62px;
+  height: 77px;
+}
+
+/* ===================================================================== */
+/* ============================== Footer ============================== */
+/* ===================================================================== */
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__middle {
+  text-align: center;
+  max-width: 470px;
+}
+
+.footer__middle-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer__middle-subtitle {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+}
+
+.footer__socials-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  margin-right: 20px;
+}
+
+.footer__socials-item {
+  margin-right: 10px;
+}
+.footer__socials-item:last-child {
+  margin: 0;
+}
+
+/* ===================================================================== */
+/* ================================= Media ============================= */
+/* ===================================================================== */
+@media (max-width: 1200px) {
+  .header .header__socials-item {
+    pointer-events: none;
+  }
+  .header__row-item {
+    max-width: 330px;
+    box-shadow: 4px 5px 6px 0px rgba(34, 60, 80, 0.2);
+    pointer-events: none;
+  }
+  .header__item-content {
+    padding: 35px 35px 80px 35px;
+  }
+  /* ===================================================================== */
+  /* ===================================================================== */
+  .greeting__title {
+    font-size: 38px;
+  }
+  .greeting__subtitle {
+    font-size: 12px;
+  }
+  .greeting__bottom {
+    max-width: 500px;
+  }
+  .greeting__image {
+    width: 500px;
+  }
+}
+@media (max-width: 1050px) {
+  .header__text .header__title {
+    font-size: 40px;
+  }
+  .header__text .header__subtitle {
+    font-size: 19px;
+  }
+  .header__item-content {
+    max-width: 270px;
+    padding: 35px 35px 80px 35px;
+  }
+}
+@media (max-width: 870px) {
+  .header__tel a {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .header__row {
+    display: block;
+  }
+  .header__row-item {
+    max-width: none;
+    min-height: 300px;
+  }
+  .header__row-item .header__item-title {
+    font-weight: 900;
+    font-size: 15px;
+  }
+  .header__row-item .header__item-subtitle {
+    font-size: 15px;
+  }
+  .slick-list .header__row-item {
+    margin: 10px 20px;
+  }
+  .header__item-content {
+    max-width: none;
+  }
+}
+@media (max-width: 550px) {
+  .header__text .header__title {
+    font-size: 28px;
+  }
+  .header__text .header__subtitle {
+    font-size: 16px;
+  }
+  .header__socials-item {
+    width: 25px;
+    margin-right: 7px;
+  }
+  .header__socials-item:last-child {
+    margin-right: 7px;
+  }
+  .header__btn .button {
+    width: 100%;
+    padding: 0;
+  }
+  .header__row-item {
+    max-width: none;
+    min-height: 275px;
+  }
 }
