@@ -34,4 +34,17 @@ $('.reviews__slider').slick({
   appendArrows: ('.reviews__arrows'),
   prevArrow: $('.arrow-prev'),
   nextArrow: $('.arrow-next'),
+  responsive: [{
+    breakpoint: 1050,
+    settings: {
+      slidesToShow: 2,
+    }
+  },
+  {
+    breakpoint: 870,
+    settings: {
+      slidesToShow: 1,
+    }
+  }
+  ]
 });
