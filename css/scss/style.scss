@@ -537,7 +537,7 @@
 }
 
 .reviews__bottom {
-   padding: 80px 0 120px 0;
+   padding: 80px 20px;
    text-align: center;
 }
 
@@ -576,7 +576,7 @@
 .answer {}
 
 .answer__inner {
-   padding: 110px 20px;
+   padding: 110px 0;
    text-align: center;
 }
 
@@ -652,8 +652,6 @@
    margin-bottom: 60px;
 }
 
-
-
 .item__bg {
    padding: 70px 0px;
    background: url(../images/top12/2.jpg) 0 0 / 100% no-repeat;
@@ -668,7 +666,7 @@
    flex-direction: column;
    align-items: center;
    color: #FFF;
-
+   white-space: nowrap;
 }
 
 .item__top {
@@ -885,7 +883,6 @@
    display: flex;
    flex-direction: column;
    max-width: 680px;
-   position: relative;
 }
 
 .more__title {
@@ -897,6 +894,7 @@
 
 .more__row {
    display: flex;
+   justify-content: space-between;
 }
 
 .more__row-item {
@@ -1011,7 +1009,7 @@
       }
 
       .button {
-         padding: 0 38px;
+         padding: 0;
          margin-top: 20px;
       }
    }
@@ -1043,7 +1041,7 @@
    margin: 0 auto;
    height: 100%;
    border-radius: 20px;
-   padding: 110px 0 0 120px;
+   padding: 110px 0 15px 120px;
 
 }
 
@@ -1292,11 +1290,11 @@
 
 .help__grid-item {
    padding: 37px 37px 300px 37px;
-   max-width: 560px;
-   height: 100%;
    background: #FFFFFF;
    border-radius: 20px;
    overflow: hidden;
+   position: relative;
+   z-index: 2;
    transition: all .3s;
 
    &:hover {
@@ -1308,12 +1306,10 @@
 
 
 .help-item__inner {
-   position: relative;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    height: 100%;
-   z-index: 5;
 }
 
 .help-item__heading {}
@@ -1342,13 +1338,13 @@
    display: flex;
    flex-direction: column;
 
-   .button {}
 }
 
 .help-item__button {
-   padding: 16px 23px;
+   padding: 16px 0px;
    background: linear-gradient(91.34deg, #F5F0E2 5.45%, #ECE3CC 100%);
    border-radius: 10px;
+   line-height: 25px;
    text-align: center;
    font-size: 22px;
    margin-bottom: 20px;
@@ -1356,12 +1352,12 @@
 
 .help-item__image-box {
    position: absolute;
-   left: -40px;
-   bottom: -310px;
-   z-index: -2;
+   left: 0px;
+   bottom: -5px;
+   z-index: -1;
 
    img {
-      width: 107%;
+      width: 100%;
       object-fit: contain;
    }
 }
@@ -1375,6 +1371,7 @@
 
 .numbers__content {
    max-width: 620px;
+   margin-right: 5px;
 }
 
 .numbers__text {
@@ -1439,9 +1436,7 @@
 .numbers__form {
    display: flex;
    flex-direction: column;
-   align-items: center;
    max-width: 430px;
-   height: 100%;
    padding: 100px 40px;
    text-align: center;
    background: #FFFFFF;
@@ -1459,12 +1454,12 @@
       margin: 20px 0;
 
       .button-empty {
-         padding: 0 72px;
+         padding: 0;
          margin: 0;
       }
 
       .button {
-         padding: 0 38px;
+         padding: 0 ;
          margin-top: 20px;
       }
    }
@@ -1473,10 +1468,11 @@
 }
 
 .numbers__form-title {
+   min-width: 316px;
    font-weight: 400;
    font-size: 24px;
+   text-align: center;
    line-height: 140%;
-   max-width: 300px;
    color: #212225;
 }
 
@@ -1628,11 +1624,9 @@
    }
 }
 
-
 /* ===================================================================== */
-/* ================================= Media ============================= */
+/* ============================== Media ============================== */
 /* ===================================================================== */
-
 
 @media (max-width: 1200px) {
    .header {
@@ -1689,8 +1683,70 @@
 
    /* ===================================================================== */
    /* ===================================================================== */
+   .top12__grid {
+      grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+   }
 
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .more__form {
+      box-shadow: 0px 50px 130px rgba(26, 29, 33, 0.3);
+   }
 
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .main__cashback {
+      padding: 0 20px 50px 20px;
+   }
+
+   .cashback__wrapper {
+      padding: 80px 0 20px 80px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+
+   .advantages__main {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: static;
+      margin-bottom: 30px;
+   }
+
+   .advantages__text {
+      margin-bottom: 25px;
+   }
+
+   .advantages__item-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+   }
+
+   .advantages__subtitle {
+      max-width: none;
+   }
+
+   .advantages__image-box {
+      display: none;
+   }
+
+   .advantages__row {
+      margin-bottom: 0;
+   }
+
+   .advantages__row-item {
+      display: flex;
+      max-width: 330px;
+      box-shadow: 0px 0px 21px 8px rgba(34, 60, 80, 0.2);
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .numbers__form {
+      box-shadow: 0px 50px 130px rgba(26, 29, 33, 0.3);
+   }
 }
 
 @media (max-width: 1050px) {
@@ -1731,7 +1787,6 @@
          margin: 0 0 20px 0;
       }
    }
-
 
    .greeting__bottom {
       max-width: 375px;
@@ -1776,8 +1831,261 @@
       margin-left: 0;
    }
 
+   /* ===================================================================== */
+   /* ===================================================================== */
 
+   .answer__inner {
+      padding: 30px 0 30px 0;
+   }
+
+   .answer__row {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0 0 0;
+   }
+
+   .answer__row-item {
+      margin-bottom: 40px;
+   }
+
+
+   .answer__title {
+      font-size: 24px;
+   }
+
+   .answer__subtitle {
+      font-size: 17px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .main__top12 {
+      padding: 80px 0;
+   }
+
+   .top12__grid-item {
+      pointer-events: none;
+   }
+
+   .top12__heading {
+      font-size: 38px;
+      margin-bottom: 40px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .main__sections-wrapper {
+      background: none;
+   }
+
+   .main__more {
+      padding: 0 0 120px 0;
+   }
+
+   .more__inner {
+      padding: 50px 0 70px 0;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+   }
+
+   .more__title {
+      max-width: none;
+   }
+
+   .more__row-item {
+      &:first-child {
+
+         margin-right: 20px;
+      }
+
+      max-width: 300px;
+   }
+
+   .more__row-item-number::after {
+      display: none;
+   }
+
+   .more__download {
+      position: absolute;
+      right: 50%;
+      bottom: -90px;
+      transform: translateX(60%);
+      margin: 0;
+      width: 130px;
+      height: 130px;
+
+      .more__download-text {
+         font-size: 11px;
+      }
+   }
+
+   .more__form {
+      margin-top: 35px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .cashback__wrapper {
+      position: relative;
+      padding: 20px 60px;
+      z-index: -55;
+   }
+
+   .cashback__text {
+      margin-bottom: 20px;
+      position: static;
+   }
+
+   .cashback__title {
+      font-size: 40px;
+
+      span {
+         font-size: 40px;
+      }
+
+      margin-bottom: 15px;
+   }
+
+   .cashback__subtitle {
+      max-width: 430px;
+      font-size: 14px;
+   }
+
+   .cashback__middle {
+      margin-bottom: 15px;
+      font-size: 14px;
+
+      .button-box {
+         align-items: start;
+         flex-direction: column;
+         padding: 0;
+
+         .button-empty {
+            padding: 0 80px;
+            margin: 0;
+            margin-bottom: 10px;
+         }
+      }
+
+      p {
+         font-weight: 400;
+         font-size: 14px;
+         opacity: 0.3;
+      }
+   }
+
+   .cashback__bottom {
+      font-size: 14px;
+   }
+
+   .cashback__garant {
+      width: 130px;
+      height: 130px;
+
+      .cashback__garant-text {
+         font-size: 11px;
+      }
+   }
+
+   .cashback__garant {
+      top: 236px;
+      right: -35px;
+   }
+
+   .cashback__garant-icon {
+      width: 24px;
+      height: 26px;
+   }
+
+   .cashback__image-box {
+      position: absolute;
+      right: 0;
+      top: 20%;
+      width: 330px;
+      z-index: -1;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .main__advantages {
+      padding: 0 0 40px 0;
+   }
+
+   .advantages__row {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .advantages__row-item {
+      max-width: 600px;
+      align-items: center;
+      margin-bottom: 20px;
+   }
+
+   .advantages__row-item-heading {
+      text-align: center;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+
+   .main__help {
+      padding: 50px 0;
+   }
+
+   .help__grid-item {
+      padding: 37px 37px 250px 37px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .numbers__inner {
+      position: relative;
+   }
+
+   .numbers__content {
+      max-width: none;
+   }
+
+   .numbers__text {
+      max-width: none;
+      text-align: center;
+   }
+
+   .numbers__col {
+      flex-direction: column;
+      margin-left: 20px;
+
+      & :nth-child(2) {
+         order: 2;
+      }
+
+      & :nth-child(3) {
+         order: 3;
+      }
+
+      & :nth-child(4) {
+         order: 4;
+      }
+
+      & :nth-child(5) {
+         order: 5;
+      }
+   }
+
+
+   .numbers__form {
+      position: absolute;
+      top: 30%;
+      right: 5%;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
 }
+
 
 @media (max-width: 870px) {
    .header__tel {
@@ -1960,11 +2268,239 @@
       bottom: -160%;
       transform: translate(50%);
    }
+
    .reviews__bottom {
-      padding: 80px 0 30px 0;
+      padding: 40px 20px;
    }
+
+   .reviews__bottom-text {
+      font-size: 18px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .item__bg {
+      padding: 60px 0;
+   }
+
+   .item__inner {
+      padding: 0 65px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .cashback__wrapper {
+      position: relative;
+      padding: 20px 60px;
+   }
+
+   .cashback__text {
+      margin-bottom: 10px;
+   }
+
+   .cashback__title {
+      font-size: 23px;
+
+      span {
+         font-size: 23px;
+      }
+
+      margin-bottom: 10px;
+   }
+
+   .cashback__subtitle {
+      max-width: 310px;
+      font-size: 12px;
+   }
+
+   .cashback__middle {
+      margin-bottom: 10px;
+      font-size: 12px;
+
+
+      .button-box {
+         margin: 10px 0;
+         align-items: stretch;
+
+         .button {
+            padding: 0 30px;
+            line-height: 78px;
+         }
+
+         .button-empty {
+            line-height: 65px;
+            padding: 0 30px;
+            margin: 0;
+            margin-bottom: 10px;
+         }
+      }
+
+      p {
+         text-align: center;
+         font-size: 12px;
+      }
+   }
+
+   .cashback__bottom {
+      font-size: 12px;
+   }
+
+   .cashback__garant {
+      width: 110px;
+      height: 110px;
+      padding: 25px 0;
+
+      .cashback__garant-text {
+         font-size: 11px;
+      }
+   }
+
+   .cashback__garant {
+      top: 135px;
+      right: -35px;
+   }
+
+   .cashback__garant-icon {
+      width: 24px;
+      height: 26px;
+   }
+
+   .cashback__image-box {
+      position: absolute;
+      right: 0;
+      top: 10%;
+      width: 200px;
+      z-index: -1;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .advantages__text {
+      margin-bottom: 20px;
+   }
+
+   .advantages__title {
+      font-size: 40px;
+      margin-bottom: 15px;
+   }
+
+   .advantages__middle-item {
+      margin-bottom: 20px;
+   }
+
+   .button-box {
+      flex-direction: column;
+      align-items: center;
+
+      .button {}
+
+      .button-empty {
+         margin: 0;
+         margin-bottom: 10px;
+      }
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .help__heading {
+      font-size: 21px;
+      margin-bottom: 25px;
+   }
+
+   .help__grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .help__grid-item {
+      max-width: 550px;
+      margin-bottom: 20px;
+   }
+
+   .help-item__title {
+      font-size: 24px;
+      margin-bottom: 15px;
+   }
+
+   .help-item__subtitle {
+      font-size: 14px;
+      margin-bottom: 20px;
+   }
+
+   .help-item__buttons {
+
+      .help-item__button {
+         line-height: 35px;
+      }
+
+      .button {
+         padding: 0px;
+         line-height: 75px;
+      }
+   }
+
+   .help-item__image-box {
+      width: 100%;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .main__numbers {
+      padding: 60px 0 650px 0;
+   }
+
+   .numbers__inner {
+      position: relative;
+   }
+
+   .numbers__content {
+      max-width: none;
+   }
+
+   .numbers__text {
+      max-width: none;
+      text-align: center;
+   }
+
+   .numbers__col {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+   }
+
+   .numbers__form {
+      max-width: none;
+      position: absolute;
+      top: 100%;
+      right: 50%;
+      transform: translateX(50%);
+
+      .button-box {
+         .button {
+         }
+
+
+      }
+   }
+
 }
 
+@media (max-width: 700px) {
+   .top12__grid {
+      display: block;
+      max-width: 400px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .advantages__title {
+      font-size: 30px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+}
 
 @media (max-width:650px) {
    .greeting__content {
@@ -1984,6 +2520,34 @@
 
    .reviews__arrows {
       bottom: -155%;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .cashback__wrapper {
+      padding: 15px 20px;
+   }
+
+   .cashback__subtitle {
+      max-width: 200px;
+   }
+
+   .cashback__middle {
+      .button-box {
+         .button {
+            padding: 0 5px;
+         }
+
+         .button-empty {
+            padding: 0;
+         }
+      }
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .numbers__title {
+      font-size: 40px;
    }
 
 }
@@ -2011,7 +2575,6 @@
 
    .header__btn {
       .button {
-         width: 100%;
          padding: 0;
       }
    }
@@ -2089,7 +2652,104 @@
    .reviews__arrows {
       display: none;
    }
+
    .reviews__bottom {
-      padding: 0 0 30px 0;
+      padding: 0 10px 40px 10px;
    }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .answer__inner {
+      .button {
+         padding: 0;
+      }
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .top12__heading {
+      font-size: 25px;
+   }
+
+   .top12__bottom-title {
+      font-size: 15px;
+      margin-bottom: 15px;
+   }
+
+   .top12__bottom-subtitle {
+      font-size: 12px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .more__row-item {
+      max-width: 190px;
+   }
+
+   .more__form {
+      transform: scale(0.8);
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+
+
+   .cashback__garant {
+      top: 135px;
+      right: -35px;
+      width: 90px;
+      height: 90px;
+      padding: 15px 0;
+   }
+
+   .cashback__image-box {
+      max-width: 150px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .help-item__button {
+      font-size: 13px;
+   }
+
+   .advantages__row-item-heading span {
+      margin-right: 6px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .numbers__form {
+      padding: 60px 40px;
+   }
+   .numbers__form-title {
+      min-width: 280px;
+font-size: 20px;
+   }
+}
+
+
+@media (max-width: 430px) {
+   .top12__grid {
+      max-width: 310px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+
+   .cashback__subtitle {
+      max-width: 165px;
+   }
+
+   /* ===================================================================== */
+   /* ===================================================================== */
+   .help-item__buttons {
+      .help-item__button {
+         line-height: normal;
+      }
+   }
+
+
+
+   /* ===================================================================== */
+   /* ===================================================================== */
 }
