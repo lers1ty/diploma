@@ -148,7 +148,6 @@ body {
   display: inline-block;
   background: #497BDF;
   color: #fff;
-  width: 100%;
   letter-spacing: 0.1em;
   font-weight: 700;
   font-size: 14px;
@@ -169,7 +168,6 @@ body {
   display: inline-block;
   background: #fff;
   color: #8C8C8C;
-  width: 100%;
   font-weight: 500;
   font-size: 18px;
   line-height: 89px;
@@ -247,7 +245,7 @@ header {
 }
 
 .main__map {
-  padding: 0px 0 185px 0;
+  padding: 0px 0 135px 0;
   position: relative;
 }
 .main__map #map {
@@ -255,7 +253,7 @@ header {
 }
 
 .footer {
-  padding: 70px 0 60px 0;
+  padding: 60px 0;
 }
 
 /* ==================================================================== */
@@ -1111,13 +1109,16 @@ header {
 .more__form .button-box {
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   margin: 20px 0;
 }
 .more__form .button-box .button-empty {
-  padding: 0 72px;
+  width: 100%;
+  padding: 0 5px;
   margin: 0;
 }
 .more__form .button-box .button {
+  width: 100%;
   padding: 0;
   margin-top: 20px;
 }
@@ -1546,11 +1547,18 @@ header {
 /* ===================================================================== */
 .map__inner {
   padding-top: 160px;
+  position: relative;
+}
+
+iframe {
+  width: 100%;
+  height: 700px;
 }
 
 .map__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 450px;
   padding: 75px 60px;
   background: #FFF;
@@ -1601,6 +1609,9 @@ header {
   display: flex;
 }
 
+.contact__tel-socials-img {
+  scale: 0.9;
+}
 .contact__tel-socials-img:first-child {
   margin-right: 8px;
 }
@@ -1622,12 +1633,11 @@ header {
   box-shadow: 0px 0px 51px 30px rgba(34, 66, 80, 0.15);
   border-radius: 10px;
   position: absolute;
-  top: 35px;
-  right: -200px;
+  top: 12%;
+  right: -40%;
 }
 .map__logo img {
   width: 62px;
-  height: 77px;
 }
 
 /* ===================================================================== */
@@ -1636,6 +1646,10 @@ header {
 .footer__inner {
   display: flex;
   justify-content: space-between;
+}
+
+.footer__logo img {
+  width: 100%;
 }
 
 .footer__middle {
@@ -1893,7 +1907,7 @@ header {
     position: absolute;
     right: 50%;
     bottom: -90px;
-    transform: translateX(60%);
+    transform: translateX(50%);
     margin: 0;
     width: 130px;
     height: 130px;
@@ -2030,6 +2044,19 @@ header {
   }
   /* ===================================================================== */
   /* ===================================================================== */
+  .footer {
+    padding: 40px 0 150px 0;
+  }
+  .footer__inner {
+    position: relative;
+  }
+  .footer__middle {
+    width: 100%;
+    position: absolute;
+    top: 125%;
+    transform: translateX(-50%);
+    left: 50%;
+  }
 }
 @media (max-width: 870px) {
   .header__tel a {
@@ -2268,7 +2295,6 @@ header {
   }
   .button-box {
     flex-direction: column;
-    align-items: center;
   }
   .button-box .button-empty {
     margin: 0;
@@ -2334,6 +2360,24 @@ header {
     right: 50%;
     transform: translateX(50%);
   }
+  /* ===================================================================== */
+  /* ===================================================================== */
+  iframe {
+    pointer-events: none;
+  }
+  /* ===================================================================== */
+  /* ===================================================================== */
+  .footer__logo {
+    max-width: 200px;
+  }
+  .footer__socials-text {
+    font-size: 15px;
+    margin-right: 8px;
+  }
+  .footer__socials-item {
+    scale: 0.9;
+    margin: 0;
+  }
 }
 @media (max-width: 700px) {
   .top12__grid {
@@ -2344,6 +2388,30 @@ header {
   /* ===================================================================== */
   .advantages__title {
     font-size: 30px;
+  }
+  /* ===================================================================== */
+  /* ===================================================================== */
+  .main__map {
+    padding: 0px 0 245px 0;
+  }
+  .map__inner {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  .map__content {
+    position: static;
+    padding: 50px 25px;
+  }
+  .map__logo {
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90px;
+    width: 90px;
+  }
+  .map__logo img {
+    width: 50px;
   }
   /* ===================================================================== */
   /* ===================================================================== */
@@ -2382,6 +2450,8 @@ header {
   .numbers__title {
     font-size: 40px;
   }
+  /* ===================================================================== */
+  /* ===================================================================== */
 }
 @media (max-width: 555px) {
   .header__text .header__title {
@@ -2398,6 +2468,7 @@ header {
     margin-right: 7px;
   }
   .header__btn .button {
+    width: 100%;
     padding: 0;
   }
   .header__row-item {
@@ -2457,6 +2528,7 @@ header {
   /* ===================================================================== */
   /* ===================================================================== */
   .answer__inner .button {
+    width: 100%;
     padding: 0;
   }
   /* ===================================================================== */
@@ -2508,8 +2580,46 @@ header {
     min-width: 280px;
     font-size: 20px;
   }
+  /* ===================================================================== */
+  /* ===================================================================== */
+  .main__map {
+    padding: 0px 0 340px 0;
+  }
+  .contact__heading {
+    font-size: 21px;
+  }
+  .contact__text {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  .contact__tel {
+    margin-bottom: 10px;
+  }
+  .contact__icon {
+    margin-right: 15px;
+  }
+  .contact__tel-number {
+    margin-right: 15px;
+    color: #000000;
+  }
+  .contact__tel-socials-img a {
+    display: block;
+  }
+  .contact__tel-socials-img:first-child {
+    margin-right: 5px;
+  }
+  .contact__addr {
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    max-width: 235px;
+  }
 }
 @media (max-width: 430px) {
+  .reviews__bottom .button {
+    padding: 0;
+    width: 100%;
+  }
   .top12__grid {
     max-width: 310px;
   }
@@ -2525,4 +2635,7 @@ header {
   }
   /* ===================================================================== */
   /* ===================================================================== */
+  .footer__logo {
+    max-width: 150px;
+  }
 }
