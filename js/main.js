@@ -7,43 +7,25 @@ $('.header__row').slick({
     {
       breakpoint: 870,
       settings: {
+        dots: true,
         arrows: false,
         draggable: true,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
       }
     },
     {
-      breakpoint: 550,
+      breakpoint: 600,
       settings: {
+        dots: true,
         arrows: false,
         draggable: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
       }
     }
   ]
 });
-
-$('.top12__grid').slick({
-  responsive: [
-    {
-      breakpoint: 2048,
-      settings: "unslick"
-    },
-    {
-      breakpoint: 700,
-      settings: {
-        arrows: false,
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-
-  ]
-});
-
 
 $('.reviews__slider').slick({
   infinite: false,
@@ -63,8 +45,29 @@ $('.reviews__slider').slick({
   {
     breakpoint: 870,
     settings: {
+      dots: true,
       slidesToShow: 1,
     }
   }
+  ]
+});
+
+$('.top12__grid').slick({
+  responsive: [
+    {
+      breakpoint: 2048,
+      settings: "unslick"
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        dots: true,
+        arrows: false,
+        draggable: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+
   ]
 });
