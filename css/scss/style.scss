@@ -2871,6 +2871,15 @@ iframe {
 
    /* ===================================================================== */
    /* ===================================================================== */
+   .reviews__slider {
+      .slick-dots {
+         display: flex;
+         position: absolute;
+         bottom: -7%;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
 
    .reviews__slide {
       min-height: 0;
